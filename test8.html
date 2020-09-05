@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sign in Page</title>
+    <link rel="stylesheet" href="/static/style/signin.css" type="text/css" />
+  </head>
+  <body id="signin_body">
+    <!-- Sign in Page logo section -->
+    <section class="signin_section">
+      <a href="/" title="메인 페이지로 돌아가기">
+        <img id="signin_logo" src="/static/img/basiclogo_E_H.png" />
+        <b>IDEATHON</b>
+      </a>
+
+      <!-- Sign in form section -->
+
+      <form action="/accounts/" method="POST" class="login_form">
+        <input
+          type="hidden"
+          name="csrfmiddlewaretoken"
+          value="m8cNxqgCgvdKL1zNVau02cNerkrA07PXsxkKenATfyasw9vQxA2p5A9MEIEbpU9M"
+        />
+        <div>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="babylion@likelion.org"
+            required
+            oninvalid="this.setCustomValidity('아이디를 입력하세요')"
+            oninput="setCustomValidity('')"
+          />
+        </div>
+        <div>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="password"
+            required
+            oninvalid="this.setCustomValidity('비밀번호를 입력하세요')"
+            oninput="setCustomValidity('')"
+          />
+        </div>
+        <div>
+          <button type="submit">로그인</button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
